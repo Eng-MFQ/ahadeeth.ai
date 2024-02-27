@@ -1,3 +1,4 @@
+import 'package:ahafeeth_ai_app/constants/Localization.dart';
 import 'package:ahafeeth_ai_app/constants/Utils.dart';
 import 'package:ahafeeth_ai_app/constants/constants.dart';
 import 'package:ahafeeth_ai_app/provider/AnalyticsProvider.dart';
@@ -29,6 +30,7 @@ class _SearchScreenState extends State<SearchScreen> {
   void performSearch() async {
     // Replace this with your actual API call logic
     // For now, just populate the list with mock data
+    hadeethList = [];
     setState(() {
       isLoading = true;
       isExpanded = false;
@@ -39,6 +41,25 @@ class _SearchScreenState extends State<SearchScreen> {
         isRelevance: isRelevance,
         number: selectedItemsCount);
     hadeethList.insert(0, hadeethList.first);
+
+    if (hadeethList.isEmpty) {
+      await AhadeethProvider().searchAhadeeth(
+        query: searchText,
+      );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        action: SnackBarAction(
+          label: "OK",
+          onPressed: () {},
+        ),
+        content: Text(AppLocalizations.of(context).errorSearch),
+        duration: Duration(minutes: 1),
+      ));
+      AnalyticProvider.track("ErrorWithSearch", properties: {
+        "query": searchText,
+        "isRelevance": isRelevance,
+        "number": selectedItemsCount,
+      });
+    }
 
     setState(() {
       isLoading = false;

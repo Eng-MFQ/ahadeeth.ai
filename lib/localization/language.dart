@@ -39,6 +39,7 @@ abstract class Language {
   String get fav;
 
   String get favTitle;
+  String get errorSearch;
 }
 
 class Arabic implements Language {
@@ -108,6 +109,7 @@ class Arabic implements Language {
   String get loading => "يتم إحضار الأحاديث، الرجاء الإنتظار";
   String get fav => "لا يوجد لديك أحاديث في قائمة المفضلة";
   String get favTitle => "الأحاديث مفضلة";
+  String get errorSearch => "حدث خطأ أثناء البحث، لذلك قمنا بتقليص عدد النتائج";
 }
 
 class English implements Language {
@@ -179,6 +181,7 @@ class English implements Language {
   String get loading => "Loading Ahadeeth ";
   String get fav => "No Favourite Ahadeeth in the list";
   String get favTitle => "Favourite Ahadeeth";
+  String get errorSearch => "Error with retrieving a lot of Ahadeeth, so we reduced the number of results";
 
 
 

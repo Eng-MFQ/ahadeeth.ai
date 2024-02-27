@@ -18,9 +18,10 @@ This Flutter app, developed by Whilelearn Company, is dedicated to serving the c
 
 ## App Information
 
-- **App Title:** About the App
+- **App Title:** Ahadeeth.AI
 - **Author:** Whilelearn Company
 - **Version:** 1.0.1
+- **Playstore:** 1.0.1
 
 ## Overview
 

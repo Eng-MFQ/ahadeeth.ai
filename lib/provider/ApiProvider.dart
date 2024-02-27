@@ -4,23 +4,22 @@ import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 
 class Hadeeth {
- int id;
- int chapterId;
- int bookId;
- int idInBook;
- String hadeeth;
- String chapterAr;
- String chapterEn;
- String matinAr;
- String matinEn;
- String sanadAr;
- String sanadEn;
- String titlesArGpt3;
- String titleArGpt4;
- String titleEn;
+  int id;
+  int chapterId;
+  int bookId;
+  int idInBook;
+  String hadeeth;
+  String chapterAr;
+  String chapterEn;
+  String matinAr;
+  String matinEn;
+  String sanadAr;
+  String sanadEn;
+  String titlesArGpt3;
+  String titleArGpt4;
+  String titleEn;
 
- // Convert the object to a map for serialization
-
+  // Convert the object to a map for serialization
 
   Hadeeth({
     required this.id,
@@ -38,7 +37,6 @@ class Hadeeth {
     required this.titleArGpt4,
     required this.titleEn,
   });
-
 
   factory Hadeeth.fromJson(Map<String, dynamic> json) {
     return Hadeeth(
@@ -59,24 +57,24 @@ class Hadeeth {
     );
   }
 
- Map<String, dynamic> toJson() {
-   return {
-     'id': id,
-     'chapterId': chapterId,
-     'bookId': bookId,
-     'idInBook': idInBook,
-     'hadeeth': hadeeth,
-     'chapter_ar': chapterAr,
-     'chapter_en': chapterEn,
-     'matin_ar': matinAr,
-     'matin_en': matinEn,
-     'sanad_ar': sanadAr,
-     'sanad_en': sanadEn,
-     'titles_ar_gpt3': titlesArGpt3,
-     'title_ar_gpt4': titleArGpt4,
-     'title_en': titleEn,
-   };
- }
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'chapterId': chapterId,
+      'bookId': bookId,
+      'idInBook': idInBook,
+      'hadeeth': hadeeth,
+      'chapter_ar': chapterAr,
+      'chapter_en': chapterEn,
+      'matin_ar': matinAr,
+      'matin_en': matinEn,
+      'sanad_ar': sanadAr,
+      'sanad_en': sanadEn,
+      'titles_ar_gpt3': titlesArGpt3,
+      'title_ar_gpt4': titleArGpt4,
+      'title_en': titleEn,
+    };
+  }
 }
 
 class AhadeethProvider {
@@ -134,7 +132,7 @@ class AhadeethProvider {
       }
       return _guitarList;
     } else {
-      throw Exception('Failed to load data');
+      return [];
     }
   }
 }
