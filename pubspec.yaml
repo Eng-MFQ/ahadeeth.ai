@@ -9,7 +9,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # followed by an optional build number separated by a +.
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
+# In Android, build-name is Q used as versionName while build-number used as versionCode.
 # Read more about Android versioning at https://developer.android.com/studio/publish/versioning
 # In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
 # Read more about iOS versioning at
@@ -19,7 +19,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.2+3
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=3.4.3 <4.0.0'
+
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -37,8 +38,6 @@ dependencies:
   http: ^0.13.6
   share: ^2.0.4
   cupertino_icons: ^1.0.2
-  intl: any
-  intl_translation: ^0.18.0
   flutter_localizations:
     sdk: flutter
   provider: ^6.1.1

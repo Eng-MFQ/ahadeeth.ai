@@ -10,6 +10,9 @@ import 'package:mixpanel_flutter/mixpanel_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:ui' as ui;
+import 'Fatawa/FatwaSearch.dart';
+import 'Fatawa/SheikhGPT.dart';
+import 'StartScreen.dart';
 import 'localization/app_localizations.dart';
 
 void main() {
@@ -77,7 +80,9 @@ class MyApp extends StatelessWidget {
                     child: child!,
                   );
                 },
-                home: HomePage(),
+                // home: HomePage(),
+                // home: SearchScreen(),
+                home: StartScreen(),
               );
             },
           ),
